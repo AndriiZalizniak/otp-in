@@ -1,0 +1,50 @@
+<div class="otp-form__footer inner">
+  <h2 class="otp-form__subtitle">
+    {{ content.form.footer.subtitle }}
+  </h2>
+  <p class="otp-form__text">
+    {{ content.form.footer.text_top }}
+  </p>
+
+  <div class="otp-form__checkboxes">
+    {% for checkbox in content.form.footer.checkboxes %}
+      {{ input.inputCheckbox(
+          label=checkbox.label,
+          hint=checkbox.hint,
+          name=checkbox.name,
+          id=checkbox.id
+        )
+      }}
+    {% endfor %}
+  </div>
+
+  <div class="otp-form__checkbox-extra">
+    {{ input.inputCheckboxExtra(
+      label=content.form.footer.checkboxes_extra.label,
+      name=content.form.footer.checkboxes_extra.name,
+      id=content.form.footer.checkboxes_extra.id,
+      text_1=content.form.footer.checkboxes_extra.text_1,
+      text_2=content.form.footer.checkboxes_extra.text_2,
+      policyText=content.form.footer.checkboxes_extra.privacy_policy.text,
+      policyLink=content.form.footer.checkboxes_extra.privacy_policy.link,
+      termsText=content.form.footer.checkboxes_extra.terms_of_use.text,
+      termsLink=content.form.footer.checkboxes_extra.terms_of_use.link
+    )
+  }}
+  </div>
+
+  <p class="otp-txt-italic otp-form__text">
+    {{ content.form.footer.text_bottom | safe }}
+  </p>
+
+  <div class="otp-form__submit">
+    <input id="submitted" type="hidden" name="submitted" value="submitted">
+    <div class="otp-btn otp-form__submit--btn">
+      <input type="submit" value="{{ content.form.footer.submit.button_text }}">
+    </div>
+
+    <p class="otp-txt-italic otp-form__submit--text">
+      <span>*</span> {{ content.form.footer.submit.subtext | safe }}
+    </p>
+  </div>
+</div>

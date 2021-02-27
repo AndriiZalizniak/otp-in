@@ -1,0 +1,12 @@
+<header class="otp-header">
+  <div class="otp-header__inner">
+    <a
+      class="otp-header__logo"
+      href="{{ $.URL.msd_home_de }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/images/msd-logo.png" alt="MSD logo">
+    </a>
+  </div>
+</header>

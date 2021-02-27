@@ -1,0 +1,64 @@
+@import '../../general/mixins.scss';
+@import '../scss-variables.scss';
+
+.otp-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 150px;
+  font-weight: 700;
+  color: $white;
+  overflow: hidden;
+  z-index: 0;
+  outline: 1px solid $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+  vertical-align: middle;
+
+  @include media(">tiny") {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 22px;
+    min-height: 64px;
+  }
+
+  @include media("<=tiny") {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 18px;
+    min-height: 48px;
+  }
+
+  &:hover {
+    &:after {
+      filter: brightness(120%);
+    }
+  }
+
+  &>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font: inherit;
+    color: currentColor;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $green;
+    content: '';
+    z-index: -1;
+    transition: filter 0.2s;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+<title>{{ title }}</title>
+
+<!-- нужно проставить ссылки на фавиконы из сеилсфорса -->
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<!-- Disable tap highlight on IE -->
+<meta name="msapplication-tap-highlight" content="no">
+
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-rim-auto-match" content="none">
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileColor" content="#2F3BA2">
+
+<!-- <link rel="manifest" href="manifest.json"> -->
+<!-- <meta name="msapplication-config" content="images/browserconfig.xml"> -->
+
+<!-- Color the status bar on mobile devices -->
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">

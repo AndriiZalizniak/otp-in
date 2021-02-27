@@ -1,0 +1,5 @@
+{% set content_de = {
+  header: {
+    msd_home_href: 'https://www.msd.de/'
+  }
+} %}

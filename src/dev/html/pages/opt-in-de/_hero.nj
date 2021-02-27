@@ -1,0 +1,21 @@
+<section class="otp-hero-sec">
+  <div class="otp-wrap otp-hero">
+    <h1 class="otp-hero__title">
+      {{ content.hero.title }}
+    </h1>
+
+    <div class="otp-hero__text">
+      <p>
+        {{ content.hero.text }}
+      </p>
+
+      <ul>
+        {% for item in content.hero.list %}
+        <li>
+          -&#160;{{ item }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

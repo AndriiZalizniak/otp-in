@@ -1,0 +1,30 @@
+[class*="tnf-icon"] {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.tnf-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.tnf-icon-arrow-r {
+  width: 1em;
+  height: 1em;
+}
+
+.tnf-icon-people,
+.tnf-icon-laptop,
+.tnf-icon-box {
+  @include media(">tiny") {
+    width: 3.2em;
+    height: 3.2em;
+  }
+
+  @include media("<=tiny") {
+    width: 2em;
+    height: 2em;
+  }
+}

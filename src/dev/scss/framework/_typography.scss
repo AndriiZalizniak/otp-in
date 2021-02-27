@@ -1,0 +1,139 @@
+@import './scss-variables';
+@import '../general/mixins.scss';
+
+html,
+button,
+input,
+textarea {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1,
+.otp-h1 {
+  line-height: 1.25em;
+  font-weight: 700;
+
+  @include media(">tiny") {
+    font-size: 40px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 30px;
+  }
+}
+
+h2,
+.otp-h2 {
+  line-height: 1.35em;
+  font-weight: 600;
+  
+  @include media(">tiny") {
+    font-size: 32px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 24px;
+  }
+}
+
+h3,
+.otp-h3 {
+  line-height: 1.25em;
+  font-weight: 700;
+
+  @include media(">tiny") {
+    font-size: 24px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 18px;
+  }
+}
+
+.otp-h4 {}
+
+.otp-h5 {}
+
+.otp-h6 {}
+
+.otp-lead {
+  font-weight: 400;
+  line-height: 1.35em;
+
+  @include media(">tiny") {
+    font-size: 24px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 18px;
+  }
+}
+
+p,
+.otp-reg {
+  line-height: 1.37em;
+  font-weight: 400;
+
+  @include media(">tiny") {
+    font-size: 18px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 14px;
+  }
+}
+
+.otp-small {
+  line-height: 1.39em;
+  font-weight: 400;
+
+  @include media(">tiny") {
+    font-size: 16px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 12px;
+  }
+}
+
+.otp-extra-small {
+  line-height: 1.35em;
+  font-weight: 400;
+
+  @include media(">tiny") {
+    font-size: 14px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 11px;
+  }
+}
+
+.otp-txt-upper {
+  text-transform: uppercase;
+}
+
+.otp-txt-italic {
+  font-style: italic;
+}
+
+.otp-txt-bold {
+  font-weight: 700;
+}
+
+// Colors
+.otp-white {
+  color: $white;
+}
+
+.otp-text {
+  color: $text;
+}
+
+.otp-grey-3 {
+  color: $grey-3;
+}
+
+.otp-green {
+  color: $green;
+}

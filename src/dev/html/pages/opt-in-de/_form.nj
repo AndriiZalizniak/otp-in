@@ -1,0 +1,9 @@
+<section class="otp-form-sec">
+  <div class="otp-wrap">
+    <form action="%%=RequestParameter('PAGEURL')=%%" method="POST" class="otp-form form">
+      {% include "./_form_personal-info.nj" %}
+      {% include "./_form-business-info.nj" %}
+      {% include "./_form-footer.nj" %}
+    </form>
+  </div>
+</section>

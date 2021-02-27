@@ -1,0 +1,20 @@
+{% extends "./template/_layout.nj" %}
+
+{% set pageClass = 'opt-in' %}
+{% set lang = 'de' %}
+{% set title = 'Opt-in' %}
+{% import "./config/content-de.nj" as content_de %}
+{% set content = content_de.content %}
+
+{% block styles %}
+  <link rel="stylesheet" href="./styles/opt-in.css">
+{% endblock %}
+
+{% block main %}
+  {% include "./pages/opt-in-de/_hero.nj" %}
+  {% include "./pages/opt-in-de/_form.nj" %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="scripts/opt-in.js" defer></script>
+{% endblock %}

@@ -1,0 +1,104 @@
+.otp-form-sec {}
+
+.otp-form {
+  padding-bottom: 80px;
+
+  &__personal-info {
+    padding-bottom: 70px;
+  }
+
+  &__business-info {
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__inputs {
+    @include media(">large") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .otp-input-wrap {
+      max-width: 100%;
+      flex: calc(50% - 30px);
+
+      &:nth-child(even) {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__footer {
+    padding-bottom: 70px;
+  }
+
+  &__checkboxes {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 70%;
+
+    .otp-input-checkbox-wrap {
+      padding: 12px 0;
+      flex: calc(50% - 40px);
+
+      &:nth-child(even) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__checkbox-extra {
+    padding-bottom: 50px;
+
+    a {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+
+
+  &__subtitle {
+    padding-bottom: 22px;
+  }
+
+  &__text {
+    padding-bottom: 32px;
+  }
+
+  &__submit {
+    text-align: right;
+
+    &--btn {
+
+    }
+
+    &--text {
+      padding-top: 40px;
+      line-height: 1.7em;
+
+      &>span {
+        color: red;
+      }
+    }
+  }
+
+  .inner {
+    @include media(">large") {
+      padding-right: $halfGap-desktop;
+      padding-left: $halfGap-desktop;
+    }
+
+    @include media("<=large") {
+      padding-right: $halfGap-mobile;
+      padding-left: $halfGap-mobile;
+    }
+  }
+}

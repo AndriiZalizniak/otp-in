@@ -1,0 +1,14 @@
+<footer class="otp-footer">
+  <div class="otp-footer__inner">
+    {% for item in content.footer.links %}
+      <a
+        href="{{ item.link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="otp-footer__link"
+      >
+      {{ item.text }}
+      </a>
+    {% endfor %}
+  </div>
+</footer>

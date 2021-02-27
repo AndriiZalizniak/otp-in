@@ -1,0 +1,21 @@
+@import './framework/scss-variables.scss';
+@import './general/include-media';
+
+// main
+@import './pages/opt-in/hero';
+@import './pages/opt-in/form';
+// @import './pages/opt-in/footer';
+
+// @import './components/popup-successs';
+// @import './components/select';
+// @import './framework/ui/select';
+
+.opt-in-page {
+  // position: relative;
+}
+
+.opt-in-wrap {
+  // max-width: 1120px;
+  // padding: 0 $gap-mobile;
+  // margin: 0 auto;
+}

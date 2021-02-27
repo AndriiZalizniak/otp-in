@@ -1,0 +1,167 @@
+@import '../../general/mixins.scss';
+@import '../scss-variables.scss';
+
+.otp-input-wrap {
+  padding-bottom: 12px;
+
+  &>label {
+    padding-bottom: 12px;
+    display: inline-block;
+    font-style: italic;
+
+    &>span {
+      color: red;
+    }
+  }
+
+  &>input {
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 8px;
+    background-color: $white;
+    outline: none;
+    width: 100%;
+    font-weight: 400;
+    color: $green;
+    border: 1px solid $green;
+    transition: border-color .2s linear, background .2s linear;
+  
+    @include media(">tiny") {
+      font-size: 18px;
+      height: 55px;
+      line-height: 1.4em;
+    }
+  
+    @include media("<=tiny") {
+      font-size: 16px;
+      height: 42px;
+      line-height: 1.2em;
+    }
+  
+    @include placeholder {
+      color: $green;
+    }
+
+    &:focus {
+      background-color: rgba($grey-2, .3);
+      border-color: $grey-3;
+    }
+  
+    &:hover {
+      background-color: rgba($grey-2, .3);
+      border-color: $grey-3;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: $green !important;
+    }
+  }
+}
+
+.otp-input-checkbox-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+
+  &>input {
+    display: none;
+
+    &:checked + label::after {
+      opacity: 1;
+    }
+  }
+
+  &>label {
+    padding-left: 36px;
+    position: relative;
+    transition: opacity .1s linear;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      bottom: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $green;
+      border-radius: 4px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 10px;
+      height: 7px;
+      border: 2px solid $black;
+      border-top: 0;
+      border-right: 0;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: opacity .2s linear;
+      pointer-events: none;
+    }
+
+    &:hover {
+      // input:not(:checked) & {
+        opacity: .6;
+      // }
+    }
+  }
+
+  .otp-hint {
+    margin-left: auto;
+    padding-left: 26px;
+    position: relative;
+    cursor: pointer;
+
+
+    &:hover {
+      .otp-hint__text {
+        opacity: 1;
+        transform: translateY(-45%) scale(1);
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+    }
+
+    &__text {
+      opacity: 0;
+      padding: 8px;
+      position: absolute;
+      top: 0;
+      left: -320px;
+      max-width: 300px;
+      color: $white;
+      background-color: $green;
+      text-align: center;
+      border-radius: 16px;
+      z-index: 1;
+      transform: translateY(-45%) scale(0.5);
+      pointer-events: none;
+      transition: opacity .15s linear, transform .15s linear;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        background-color: $green;
+        z-index: 0;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
+}

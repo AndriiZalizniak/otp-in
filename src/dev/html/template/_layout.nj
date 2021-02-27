@@ -1,0 +1,28 @@
+{% import "../macros/_svg-icons.nj" as svg %}
+{% import "../macros/_buttons.nj" as btn %}
+{% import "../macros/_inputs.nj" as input %}
+
+{# {% import "../config/content-fr.nj" as content_fr %}
+{% import "../config/content-it.nj" as content_it %} #}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+{% include './partials/_head.nj' %}
+<link rel="stylesheet" href="./styles/styles.css">
+{% block styles %}{% endblock %}
+</head>
+<body class="{{ pageClass }}">
+  {% include './partials/_header.nj' %}
+  
+<main>
+  {% block main %}{% endblock %}
+</main>
+
+  {% include './partials/_footer.nj' %}
+  {% include './_svg-icons-symbols.nj' %}
+  <script src="scripts/scripts.js"></script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,9 @@
+<div class="tnf-popup-success js-popup-success js-hidden">
+  <div class="tnf-popup-success__inner">
+    <p>Vielen Dank für Ihre Registrierung!</p>
+
+    <button type="button" class="tnf-btn tnf-popup-success__inner--btn js-btn-close-popup">
+      <span>OK</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+{% set content = {
+  header: {
+    msd_home_href: 'https://www.msd.de/'
+  },
+  hero: {
+    title: 'Persönliche Einwilligung',
+    text: 'MSD Merck Sharp & Dohme AG ist die Kommunikation mit Kunden wichtig. Wir möchten Ihnen relevante Informationen über Ihre bevorzugten Kanäle zur Verfügung stellen. Schalten Sie sich FREI für wertvolle Informationen rund um spannende Neuigkeiten zu:',
+    list: [
+      'Neuen Daten & Studien',
+      'Webinare von Schweizer und internationalen Experten',
+      'Ankündigungen von Neuzulassungen',
+      'Kongress-Highlights'
+    ]
+  },
+  form: {
+    personal: {
+      title: 'Persönliche Informationen',
+      inputs: [
+        {
+          label: 'Vorname',
+          type: 'text',
+          id: 'user_name',
+          name: 'name',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Nachname',
+          type: 'text',
+          id: 'user_last_name',
+          name: 'last_name',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Email',
+          type: 'email',
+          id: 'user_email',
+          name: 'email',
+          placeholder: 'email@email.com',
+          maxlength: null,
+          minlength: null,
+          required: true,
+          pattern: '/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/',
+          value: ''
+        },
+        {
+          label: 'Telefon',
+          type: 'tel',
+          id: 'user_tel',
+          name: 'tel',
+          placeholder: '',
+          maxlength: 12,
+          minlength: 12,
+          required: false,
+          value: ''
+        },
+        {
+          label: 'Fachgebiet',
+          type: 'text',
+          id: 'user_expertise_area',
+          name: 'expertise_area',
+          placeholder: '',
+          maxlength: 100,
+          minlength: 10,
+          required: false,
+          value: ''
+        }
+      ]
+    },
+    business: {
+      title: 'Geschäftliche Informationen',
+      inputs: [
+        {
+          label: 'Spital/Praxis',
+          type: 'text',
+          id: 'spital',
+          name: 'spital',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Straße, Hausnummer',
+          type: 'text',
+          id: 'street',
+          name: 'street',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'PLZ, Ort',
+          type: 'number',
+          id: 'user_zip',
+          name: 'zip',
+          placeholder: 'Test',
+          maxlength: 10,
+          minlength: 6,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'GLN-Nummer',
+          type: 'number',
+          id: 'gln-nummer',
+          name: 'gln-nummer',
+          placeholder: 'Test',
+          maxlength: 12,
+          minlength: 2,
+          required: false,
+          value: ''
+        }
+      ]
+    },
+    footer: {
+      subtitle: 'Kommunikationseinstellungen',
+      text_top: 'EINWILLIGUNGSERKLÄRUNG: Ich stimme zu, dass meine personenbezogenen Daten von der MSD Merck Sharp & Dohme AG im Rahmen der professionellen Zusammenarbeit zum Zweck der Information über pharmazeutische Produkte bzw. Dienstleistungen sowie für allgemeine, gesundheitsbezogene Informationen über die folgenden Kommunikationswege erhoben, verarbeitet und genutzt werden:',
+      text_bottom: 'Es können sich nur medizinische Fachpersonen anmelden. Sie können sich jederzeit kostenlos abmelden. Mit Ihrem Einverständnis akzeptieren Sie die Nutzungsbestimmungen und die Datenschutzerklärung von MSD Merck Sharp & Dohme AG. Diese Unterlagen sind online unter <a href="https://www.msd.ch/de/terms-of-use.xhtml" target="_blank" rel="noopener noreferrer">https://www.msd.ch/de/terms-of-use.xhtml</a> und <a href="https://www.msdprivacy.com/sw/de/" target="_blank" rel="noopener noreferrer">https://www.msdprivacy.com/sw/de/</a> oder auf Anfrage verfügbar.Die im Rahmen der professionellen Zusammenarbeit erhobenen, personen-bezogenen Daten werden nicht an Dritte verkauft oder auf andere Art und Weise vertrieben oder weitergegeben.',
+      checkboxes: [
+        {
+          label: 'Telefonischer Kontakt',
+          hint: 'Ich möchte auf dem Laufenden bleiben, indem ich Telefonanrufe von meinem MSD-Kundenbetreuer erhalte.',
+          name: 'tel_contact',
+          id: 'tel_contact'
+        },
+        {
+          label: 'Newsletter von MSD',
+          hint: 'Ich möchte regelmässig informative E-Mail-Benachrichtigungen über MSD-Veranstaltungen, medizinische Fortbildung und Neuigkeiten erhalten, die auf mein Therapiegebiet zugeschnitten sind. Auch möchte ich über die neuesten Produkte von MSD informiert werden',
+          name: 'newsletter_contact',
+          id: 'newsletter_contact'
+        },
+        {
+          label: 'E-Mails von einem MSD-Betreuer',
+          hint: 'Ich möchte gerne Informationen über medizinische Veranstaltungen, produktunabhängige Inhalte und Inhalte zu bestehenden und neuen Produkte von MSD erhalten.',
+          name: 'email_contact',
+          id: 'email_contact'
+        },
+        {
+          label: 'Mobile Nachrichten',
+          hint: 'ch möchte gerne Informationen über medizinische Veranstaltungen, produktunabhängige Inhalte und Inhalte zu bestehenden und neuen Produkte von MSD erhalten.',
+          name: 'mobile_contact',
+          id: 'mobile_contact'
+        }
+      ],
+      checkboxes_extra: {
+        text_1: 'Ich akzeptiere die',
+        text_2: 'und die',
+        id: 'policy',
+        privacy_policy: {
+          text: 'Datenschutzerklärung',
+          link: 'https://www.msdprivacy.com/sw/de'
+        },
+        terms_of_use: {
+          text: 'Nutzungsbedingungen',
+          link: 'https://www.msd.ch/de/terms-of-use.xhtml'
+        }
+      },
+      submit: {
+        button_text: 'SENDEN',
+        subtext: 'Pflichtfeld <br> CH-NON-01017 / Erstellt 02/21'
+      }
+    }
+  },
+  footer: {
+    links: [
+      {
+        text: 'Impressum',
+        link: '#Impressum'
+      },
+      {
+        text: 'Datenschutz',
+        link: 'https://www.msdprivacy.com/sw/de'
+      },
+      {
+        text: 'Nutzungsbedingungen',
+        link: 'https://www.msd.ch/de/terms-of-use.xhtml'
+      },
+      {
+        text: 'Cookie Preferences',
+        link: '#Cookie Preferences'
+      }
+    ]
+  }
+} %}

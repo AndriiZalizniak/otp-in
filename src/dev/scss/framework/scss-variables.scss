@@ -1,0 +1,40 @@
+// Media queries breakpoints
+$extratiny:     320px;
+$tiny:          576px;
+$small:         768px;
+$medium:        992px;
+$large:         1200px;
+$extralarge:    1600px;
+
+// Colors
+$white:   #FFFFFF;
+$black:   #000000;
+$green:   #00877C;
+$grey:    #BDBDBD;
+$grey-2:  #E0E0E0;
+$grey-3:  #828282;
+$grey-4:  #F2F2F2;
+$grey-bg: rgba(223, 229, 235, 0.35);
+$text:    #828282;
+
+// Sizes
+$wrap: 1208px;
+$wrap-medium: 712px;
+$wrap-small: 602px;
+
+$gap-desktop: 48px;
+$gap-mobile: 32px;
+
+$gap-aside-desktop-narrow: 76px;
+$gap-aside-desktop-wide: 134px;
+$gap-aside-desktop-wide: 147px;
+// $gap-aside-mobile: 40px;
+
+$halfGap-desktop: 24px;
+$halfGap-mobile: 16px;
+
+// Pathes
+$pathToImg:     '../images/';
+
+// settings of "include-media"
+$breakpoints: (extratiny: $extratiny, tiny: $tiny, small: $small, medium: $medium, large: $large, extralarge: $extralarge);

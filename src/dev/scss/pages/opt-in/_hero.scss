@@ -1,0 +1,17 @@
+.otp-hero-sec {}
+
+.otp-hero {
+  padding-bottom: 70px;
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__text {
+    &>p {
+      padding-bottom: 30px;
+    }
+
+    &>ul {}
+  }
+}

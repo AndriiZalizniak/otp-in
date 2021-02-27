@@ -1,0 +1,182 @@
+{% import "./macros/_buttons.nj" as btn %}
+{% import "./macros/_svg-icons.nj" as svg %}
+{% import "./macros/_inputs.nj" as input %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include './template/partials/_head.nj' %}
+    <link rel="stylesheet" href="/styles/name-styles.css">
+  </head>
+
+  <style>
+    ul > li {
+      padding: 5px 0;
+    }
+    .tnf-fram-colors > li {
+      display: flex;
+      align-items: center;
+    }
+    .tnf-fram-colors > li > span {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      box-shadow: 0 0 4px #000;
+    }
+    .tnf-fram-block {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  </style>
+
+  <body>
+    <div class="tnf-wrap">
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Color</p>
+        <hr>
+        <ul class="tnf-lead tnf-fram-colors">
+          <li>
+            <span style="background:var(--white)"></span>var(--white): #FFFFFF
+          </li>
+          <li>
+            <span style="background:var(--text)"></span>var(--text): #000000
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Typography</p>
+        <hr>
+        <ul class="tnf-fram-fonts">
+          <li>
+            <p class="tnf-h1">.tnf-h1 144px 72px</p>
+          </li>
+          <li>
+            <p class="tnf-h2">.tnf-h2 44px 24px</p>
+          </li>
+          <li>
+            <p class="tnf-h3">.tnf-h3 48px 44px 24px</p>
+          </li>
+          <li>
+            <p class="tnf-h4">.tnf-h4 36px 24px 18px</p>
+          </li>
+          <li>
+            <p class="tnf-h5">.tnf-h5 24px 18px</p>
+          </li>
+          <li>
+            <p class="tnf-h6">.tnf-h6 16px</p>
+          </li>
+          <li>
+            <p class="tnf-lead ">.tnf-lead 24px 16px</p>
+          </li>
+          <li>
+            <p class="tnf-reg">.tnf-reg 16px 14px</p>
+          </li>
+          <li>
+            <p class="tnf-txt-ceo">.tnf-txt-ceo 16px</p>
+          </li>
+          <li>
+            <p class="tnf-small">.tnf-small 12px</p>
+          </li>
+          <li>
+            <p class="tnf-txt-bg">.tnf-txt-bg 140px 50px</p>
+          </li>
+          <li>
+            <p class="tnf-txt-strong">.tnf-txt-strong 16px 14px</p>
+          </li>
+          <li>
+            <p class="tnf-txt-strong-list">.tnf-txt-strong-list 20px 18px</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Typography colors</p>
+        <hr>
+        <ul class="tnf-lead tnf-fram-fonts">
+          <li>
+            <p class="tnf-text">.tnf-text</p>
+          </li>
+          <li>
+            <p class="tnf-white" style="background: #ccc;">.tnf-white</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Typography others</p>
+        <hr>
+        <ul class="tnf-lead tnf-fram-fonts">
+          <li>
+            <p class="tnf-txt-upper">.tnf-txt-upper</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Buttons</p>
+        <hr>
+        <ul>
+          <li style="background: #CCCCCC;">
+            {{ btn.btnBase(".tnf-btn") }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Links</p>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" class="tnf-link">.tnf-link</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Inputs</p>
+        <hr>
+        input.inputBase(type ="", placeholder = "", class = "", id = "")
+        <div style="background: #ccc; padding: 5px;">
+          {{ input.inputBase("text", placeholder="placeholder") }}
+        </div> 
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Icons</p>
+        <hr>
+        <p style="margin: 20px 0;">
+          <strong>svg.icon('name')</strong>
+        </p>
+        <ul>
+          <li>
+            {{ svg.icon('icon-arrow-r') }} - <strong>icon-arrow-r</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tnf-fram-block">
+        <hr>
+        <p class="tnf-h5">Lists</p>
+        <hr>
+        <ul class="tnf-list tnf-list">
+          <li>Some first item</li>
+          <li>Some second item</li>
+          <li>Some third item</li>
+        </ul>
+      </div>
+
+    {% include './template/_svg-icons-symbols.nj' %}
+  </body>
+</html>

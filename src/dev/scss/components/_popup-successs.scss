@@ -1,0 +1,36 @@
+@import '../general/mixins.scss';
+@import '../framework/scss-variables.scss';
+
+.tnf-popup-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($grey-3, 0.3);
+
+  &__inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 450px;
+    width: 100%;
+    min-height: 200px; 
+    background-color: $white;
+    border-radius: 20px;
+    text-align: center;
+    
+    &--btn {
+      max-width: 150px;
+    }
+  }
+
+  &.js-hidden {
+    display: none;
+  }
+}
