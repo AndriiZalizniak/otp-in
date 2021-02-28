@@ -1,5 +1,5 @@
 <div class="otp-form__business-info">
-  <h2 class="otp-green otp-form__title">
+  <h2 class="otp-txt-wrap otp-green otp-form__title">
     {{ content.form.business.title }}
   </h2>
 

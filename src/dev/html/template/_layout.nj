@@ -2,13 +2,15 @@
 {% import "../macros/_buttons.nj" as btn %}
 {% import "../macros/_inputs.nj" as input %}
 
-{# {% import "../config/content-fr.nj" as content_fr %}
-{% import "../config/content-it.nj" as content_it %} #}
-
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
 {% include './partials/_head.nj' %}
+
+{# lang redirect #}
+{# <script src="scripts/lang-redirect.js"></script> #}
+{# lang redirect #}
+
 <link rel="stylesheet" href="./styles/styles.css">
 {% block styles %}{% endblock %}
 </head>

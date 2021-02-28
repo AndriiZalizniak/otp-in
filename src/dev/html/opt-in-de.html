@@ -6,6 +6,9 @@
 {% import "./config/content-de.nj" as content_de %}
 {% set content = content_de.content %}
 
+{% import "./config/langs.nj" as langs %}
+{% set langs = langs.langs %}
+
 {% block styles %}
   <link rel="stylesheet" href="./styles/opt-in.css">
 {% endblock %}
@@ -16,5 +19,5 @@
 {% endblock %}
 
 {% block scripts %}
-  <script src="scripts/opt-in.js" defer></script>
+  {# <script src="scripts/opt-in.js" defer></script> #}
 {% endblock %}

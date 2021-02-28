@@ -121,6 +121,12 @@ p,
   font-weight: 700;
 }
 
+.otp-txt-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 // Colors
 .otp-white {
   color: $white;
@@ -136,4 +142,8 @@ p,
 
 .otp-green {
   color: $green;
+}
+
+.otp-red {
+  color: red;
 }

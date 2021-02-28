@@ -12,7 +12,13 @@
   }
 
   &__title {
-    padding-bottom: 50px;
+    @include media(">tiny") {
+      padding-bottom: 50px;
+    }
+
+    @include media("<=tiny") {
+      padding-bottom: 24px;
+    }
   }
 
   &__inputs {
@@ -28,13 +34,17 @@
       flex: calc(50% - 30px);
 
       &:nth-child(even) {
-        margin-left: 30px;
+        @include media(">large") {
+          margin-left: 30px;
+        }
       }
     }
   }
 
   &__footer {
-    padding-bottom: 70px;
+    @include media(">tiny") {
+      padding-bottom: 70px;
+    }
   }
 
   &__checkboxes {
@@ -43,14 +53,27 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 70%;
+
+    @include media(">large") {
+      max-width: 70%;
+    }
 
     .otp-input-checkbox-wrap {
       padding: 12px 0;
-      flex: calc(50% - 40px);
+
+      @include media(">large") {
+        flex: calc(50% - 40px);
+      }
+      
+      @include media("<=large") {
+        flex: 100%;
+      }
 
       &:nth-child(even) {
-        margin-left: 40px;
+        
+        @include media(">large") {
+          margin-left: 40px;
+        }
       }
     }
   }
@@ -96,7 +119,7 @@
       padding-left: $halfGap-desktop;
     }
 
-    @include media("<=large") {
+    @include media(">tiny", "<=large") {
       padding-right: $halfGap-mobile;
       padding-left: $halfGap-mobile;
     }

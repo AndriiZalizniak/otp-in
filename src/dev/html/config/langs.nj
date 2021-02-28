@@ -1,0 +1,14 @@
+{% set langs = [
+  {
+    lang: 'DE',
+    link: 'https://cloud.mail.mymsd.ch/optin-de'
+  },
+  {
+    lang: 'FR',
+    link: 'https://cloud.mail.mymsd.ch/optin-fr'
+  },
+  {
+    lang: 'IT',
+    link: 'https://cloud.mail.mymsd.ch/optin-it'
+  }
+] %}

@@ -44,10 +44,9 @@
           id: 'user_email',
           name: 'email',
           placeholder: 'email@email.com',
-          maxlength: null,
-          minlength: null,
+          maxlength: 30,
+          minlength: 4,
           required: true,
-          pattern: '/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/',
           value: ''
         },
         {
@@ -148,7 +147,7 @@
         },
         {
           label: 'Mobile Nachrichten',
-          hint: 'ch möchte gerne Informationen über medizinische Veranstaltungen, produktunabhängige Inhalte und Inhalte zu bestehenden und neuen Produkte von MSD erhalten.',
+          hint: 'Ich möchte gerne Informationen über medizinische Veranstaltungen, produktunabhängige Inhalte und Inhalte zu bestehenden und neuen Produkte von MSD erhalten.',
           name: 'mobile_contact',
           id: 'mobile_contact'
         }
@@ -157,6 +156,8 @@
         text_1: 'Ich akzeptiere die',
         text_2: 'und die',
         id: 'policy',
+        name: 'policy',
+        required: true,
         privacy_policy: {
           text: 'Datenschutzerklärung',
           link: 'https://www.msdprivacy.com/sw/de'

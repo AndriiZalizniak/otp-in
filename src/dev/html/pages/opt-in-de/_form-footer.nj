@@ -1,5 +1,5 @@
 <div class="otp-form__footer inner">
-  <h2 class="otp-form__subtitle">
+  <h2 class="otp-txt-wrap otp-form__subtitle">
     {{ content.form.footer.subtitle }}
   </h2>
   <p class="otp-form__text">
@@ -25,6 +25,8 @@
       id=content.form.footer.checkboxes_extra.id,
       text_1=content.form.footer.checkboxes_extra.text_1,
       text_2=content.form.footer.checkboxes_extra.text_2,
+      required=content.form.footer.checkboxes_extra.required,
+      name=content.form.footer.checkboxes_extra.name,
       policyText=content.form.footer.checkboxes_extra.privacy_policy.text,
       policyLink=content.form.footer.checkboxes_extra.privacy_policy.link,
       termsText=content.form.footer.checkboxes_extra.terms_of_use.text,

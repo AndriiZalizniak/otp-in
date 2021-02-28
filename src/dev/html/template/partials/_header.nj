@@ -8,5 +8,35 @@
     >
       <img src="/images/msd-logo.png" alt="MSD logo">
     </a>
+
+    <div class="otp-header__lang js-lang-wrap">
+      <button type="button" class="otp-btn-lang-toggle js-btn-lang-toggle">
+        <p class="otp-btn-lang-toggle__inner">
+          <span class="otp-btn-lang-toggle__inner--text">
+            Choose a language: 
+          </span>
+
+          <span class="otp-txt-bold otp-green otp-btn-lang-toggle__inner--current">
+            {{ lang | upper }}
+          </span>
+        </p>
+      </button>
+
+      <ul class="otp-header-lang-wrap js-langs">
+        {% for lang in langs %}
+        <li>
+          <p>
+            <a
+              href="{{ lang.link }}"
+              rel="noopener noreferrer"
+              data-lang="DE"
+            >
+            {{ lang.lang }}
+            </a>
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </header>

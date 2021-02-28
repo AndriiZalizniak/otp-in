@@ -113,8 +113,9 @@
     </a>
     {{ text_2 }}
     <a href="{{ termsLink }}" target="_blank" rel="noopener noreferrer">
-      {{ termsText }}
-    </a>
+      {{ termsText }}</a>
+
+    <span class="otp-red">*</span>
   </label>
 </p>
 {% endmacro %}

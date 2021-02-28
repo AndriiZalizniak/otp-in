@@ -19,5 +19,85 @@
 
   &__logo {
     display: inline-block;
+
+    @include media("<=tiny") {
+      max-width: 170px;
+    }
+  }
+
+  &__lang {
+    position: absolute;
+    z-index: 1;
+
+    @include media(">large") {
+      top: $gap-mobile;
+      right: $gap-mobile;
+      overflow: hidden;
+    }
+
+    @include media("<=large") {
+      top: $halfGap-mobile;
+      right: $halfGap-mobile;
+    }
+
+    .otp-btn-lang-toggle {
+      margin-bottom: 10px;
+      padding: 8px 0;
+      position: relative;
+      background-color: $white;
+      z-index: 1;
+
+      &__inner {
+        &--text {
+          @include media("<=large") {
+            display: none;
+          }
+        }
+
+        &--current {
+          border: 1px solid $green;
+          border-radius: 4px;
+
+          @include media(">large") {
+            margin-left: 6px;
+            padding: 4px;
+          }
+
+          @include media("<=large") {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .otp-header-lang-wrap {
+    padding: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-50px);
+    z-index: 0;
+    transition: transform .15s linear, opacity .2s linear;
+    border: 1px solid $green;
+    border-radius: 4px;
+    background-color: $white;
+
+    &>li {
+      &:not(:last-child) {
+        @include media(">large") {
+          padding-bottom: 8px;
+        }
+
+        @include media("<=large") {
+          padding-bottom: 16px;
+        }
+      }
+    }
+
+    &.is-show {
+      opacity: 1;
+      pointer-events: visible;
+      transform: translateY(0);
+    }
   }
 }
