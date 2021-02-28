@@ -1,5 +1,196 @@
-{% set content_de = {
+{% set content = {
   header: {
     msd_home_href: 'https://www.msd.de/'
+  },
+  hero: {
+    title: 'Consenso personale',
+    text: 'La comunicazione con i clienti è importante per MSD Svizzera. Desideriamo fornirle informazioni pertinenti sui suoi canali preferiti. Si registri GRATUITAMENTE per ricevere informazioni preziose sulle novità entusiasmanti relative a:
+',
+    list: [
+      'Nuovi dati e studi',
+      'Webinar di esperti svizzeri e internazionali',
+      'Annunci di nuove approvazioni',
+      'Punti salienti della Convention'
+    ]
+  },
+  form: {
+    personal: {
+      title: 'Informazioni personali',
+      inputs: [
+        {
+          label: 'Nome',
+          type: 'text',
+          id: 'user_name',
+          name: 'name',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Cognome',
+          type: 'text',
+          id: 'user_last_name',
+          name: 'last_name',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'E-mail',
+          type: 'email',
+          id: 'user_email',
+          name: 'email',
+          placeholder: 'email@email.com',
+          maxlength: 30,
+          minlength: 4,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Telefono',
+          type: 'tel',
+          id: 'user_tel',
+          name: 'tel',
+          placeholder: '',
+          maxlength: 12,
+          minlength: 12,
+          required: false,
+          value: ''
+        },
+        {
+          label: 'Specializzazione',
+          type: 'text',
+          id: 'user_expertise_area',
+          name: 'expertise_area',
+          placeholder: '',
+          maxlength: 100,
+          minlength: 10,
+          required: false,
+          value: ''
+        }
+      ]
+    },
+    business: {
+      title: 'Informazioni aziendali',
+      inputs: [
+        {
+          label: 'Ospedale/ambulatorio',
+          type: 'text',
+          id: 'spital',
+          name: 'spital',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Via, numero civico',
+          type: 'text',
+          id: 'street',
+          name: 'street',
+          placeholder: 'Test',
+          maxlength: 26,
+          minlength: 2,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'NPA, Città',
+          type: 'number',
+          id: 'user_zip',
+          name: 'zip',
+          placeholder: 'Test',
+          maxlength: 10,
+          minlength: 6,
+          required: true,
+          value: ''
+        },
+        {
+          label: 'Numero GLN',
+          type: 'number',
+          id: 'gln-nummer',
+          name: 'gln-nummer',
+          placeholder: 'Test',
+          maxlength: 12,
+          minlength: 2,
+          required: false,
+          value: ''
+        }
+      ]
+    },
+    footer: {
+      subtitle: 'Impostazioni di comunicazione',
+      text_top: "DICHIARAZIONE DI CONSENSO: Acconsento a che i miei dati personali vengano raccolti, elaborati e utilizzati da MSD Merck Sharp & Dohme AG, nell'ambito della collaborazione professionale, allo scopo di fornire informazioni su prodotti farmaceutici o servizi e per le informazioni generali relative alla salute attraverso i seguenti canali di comunicazione:",
+      text_bottom: 'Solo gli operatori sanitari possono iscriversi. Può annullare l\'iscrizione in qualsiasi momento gratuitamente. Con il Suo consenso, Lei accetta i Termini di utilizzo e l\'Informativa sulla privacy di MSD Merck Sharp & Dohme AG. Questi documenti sono disponibili online all’indirizzo  <a href="https://www.msd.ch/de/terms-of-use.xhtml" target="_blank" rel="noopener noreferrer">https://www.msd.ch/de/terms-of-use.xhtml</a> e <a href="https://www.msdprivacy.com/sw/de/" target="_blank" rel="noopener noreferrer">https://www.msdprivacy.com/sw/de/</a> o su richiesta. I dati personali raccolti nell’ambito di una collaborazione professionale non vengono venduti a terze parti né distribuiti o divulgati in altro modo.',
+      checkboxes: [
+        {
+          label: 'Contatto telefonico',
+          hint: 'Vorrei rimanere aggiornato/a ricevendo telefonate dal mio Assistente al servizio clienti di MSD.',
+          name: 'tel_contact',
+          id: 'tel_contact'
+        },
+        {
+          label: 'Newsletter di MSD',
+          hint: 'Desidero ricevere regolarmente e-mail informative su eventi MSD, formazione medica e novità relative alla mia area terapeutica di competenza. Desidero inoltre essere informato/a sugli ultimi prodotti di MSD.',
+          id: 'newsletter_contact'
+        },
+        {
+          label: 'E-mail inviate da un assistente di MSD',
+          hint: 'Desidero ricevere informazioni su eventi medici, contenuti non inerenti a prodotti e contenuti su prodotti esistenti e nuovi di MSD.',
+          name: 'email_contact',
+          id: 'email_contact'
+        },
+        {
+          label: 'Comunicazioni inviate tramite dispositivi mobili',
+          hint: '⦁	Desidero ricevere informazioni su eventi medici, contenuti non inerenti a prodotti e contenuti su prodotti esistenti e nuovi di MSD.',
+          name: 'mobile_contact',
+          id: 'mobile_contact'
+        }
+      ],
+      checkboxes_extra: {
+        text_1: 'Accetto l’Informativa sulla',
+        text_2: 'e i',
+        id: 'policy',
+        name: 'policy',
+        required: true,
+        privacy_policy: {
+          text: 'Privacy ',
+          link: 'https://www.msdprivacy.com/sw/de'
+        },
+        terms_of_use: {
+          text: 'Termini di utilizzo',
+          link: 'https://www.msd.ch/de/terms-of-use.xhtml'
+        }
+      },
+      submit: {
+        button_text: 'SENDEN',
+        subtext: 'Campo obbligatorio <br> CH-NON-01017 / Creato 02/2'
+      }
+    }
+  },
+  footer: {
+    links: [
+      {
+        text: 'Per stampare',
+        link: '#Impressum'
+      },
+      {
+        text: 'Protezione dati',
+        link: 'https://www.msdprivacy.com/sw/de'
+      },
+      {
+        text: "Termini di utilizzo",
+        link: 'https://www.msd.ch/de/terms-of-use.xhtml'
+      },
+      {
+        text: 'Preferenze sui cookie',
+        link: '#Cookie Preferences'
+      }
+    ]
   }
 } %}
