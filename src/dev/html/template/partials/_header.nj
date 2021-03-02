@@ -2,11 +2,15 @@
   <div class="otp-header__inner">
     <a
       class="otp-header__logo"
-      href="{{ $.URL.msd_home_de }}"
+      {% if lang === 'fr' %}
+        href="{{ $.URL.fr }}"
+      {% else %}
+        href="{{ $.URL.de }}"
+      {% endif %}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src="/images/msd-logo.png" alt="MSD logo">
+      <img src="https://image.mail.mymsd.ch/lib/fe9d13737664067c77/m/1/msd-logo_optin.png" alt="MSD logo">
     </a>
 
     <div class="otp-header__lang js-lang-wrap">

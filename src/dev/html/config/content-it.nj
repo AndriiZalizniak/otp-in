@@ -1,7 +1,4 @@
 {% set content = {
-  header: {
-    msd_home_href: 'https://www.msd.de/'
-  },
   hero: {
     title: 'Consenso personale',
     text: 'La comunicazione con i clienti è importante per MSD Svizzera. Desideriamo fornirle informazioni pertinenti sui suoi canali preferiti. Si registri GRATUITAMENTE per ricevere informazioni preziose sulle novità entusiasmanti relative a:
@@ -177,7 +174,7 @@
     links: [
       {
         text: 'Per stampare',
-        link: '#Impressum'
+        link: 'https://www.msd.ch/fr/about/msd-in-ch/'
       },
       {
         text: 'Protezione dati',

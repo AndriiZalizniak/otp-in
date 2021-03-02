@@ -1,7 +1,4 @@
 {% set content = {
-  header: {
-    msd_home_href: 'https://www.msd.de/'
-  },
   hero: {
     title: 'Consentement personnel',
     text: 'La communication avec les clients est très importante pour MSD Suisse. Nous aimerions vous fournir des informations pertinentes par le biais de vos canaux préférés. Pour obtenir de précieuses informations sur des nouveautés passionnantes, connectez-vous GRATUITEMENT 
@@ -178,15 +175,15 @@
     links: [
       {
         text: 'Imprimer',
-        link: '#Impressum'
+        link: 'https://www.msd.ch/fr/about/msd-in-ch/'
       },
       {
         text: 'Protection des données',
-        link: 'https://www.msdprivacy.com/sw/de'
+        link: 'https://www.msdprivacy.com/sw/fra/'
       },
       {
         text: "Conditions d'utilisation",
-        link: 'https://www.msd.ch/de/terms-of-use.xhtml'
+        link: 'https://www.msd.ch/fr/terms-of-use.xhtml'
       },
       {
         text: 'Préférences de cookies',

@@ -1,0 +1,5 @@
+{% set URL = {
+  de: 'https://www.mymsd.ch/de/index.xhtml?imtoken=MS59taBzrkvidNyBX57ZygBNT4Kx5s4ngrbW0tx2tx8HaKiDZ5f9r76oBdvZCE9i9oaQBnSl0qWVT5dB0JiOiahjLr7geqDRgtfJlfW62yWtp',
+  fr: 'https://www.msd-france.com/index.xhtml',
+  it: ''
+} %}

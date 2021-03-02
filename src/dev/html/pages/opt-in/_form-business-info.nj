@@ -5,8 +5,7 @@
 
   <div class="otp-form__inputs inner">
     {% for inputItem in content.form.business.inputs %}
-      {{
-        input.inputBase(
+      {{ input.inputBase(
         label=inputItem.label,
         type=inputItem.type,
         id=inputItem.id,
@@ -16,8 +15,7 @@
         minlength=inputItem.minlength,
         required=inputItem.required,
         value=inputItem.value,
-        pattern=inputItem.pattern)
-      }}
+        pattern=inputItem.pattern) }}
     {% endfor %}
   </div>
 </div>
