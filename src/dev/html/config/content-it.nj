@@ -134,7 +134,8 @@
         {
           label: 'Newsletter di MSD',
           hint: 'Desidero ricevere regolarmente e-mail informative su eventi MSD, formazione medica e novità relative alla mia area terapeutica di competenza. Desidero inoltre essere informato/a sugli ultimi prodotti di MSD.',
-          id: 'newsletter_contact'
+          id: 'newsletter_contact',
+          name: 'newsletter_contact'
         },
         {
           label: 'E-mail inviate da un assistente di MSD',
