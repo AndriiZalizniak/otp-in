@@ -1,3 +1,21 @@
+{% set radioLangs = [
+  {
+    title: 'DE',
+    name: 'lang-in-form',
+    id: 'de'
+  },
+  {
+    title: 'FR',
+    name: 'lang-in-form',
+    id: 'fr'
+  },
+  {
+    title: 'IT',
+    name: 'lang-in-form',
+    id: 'it'
+  }
+] %}
+
 <div class="otp-form__footer inner">
   <h2 class="otp-txt-wrap otp-form__subtitle">
     {{ content.form.footer.subtitle }}
@@ -5,6 +23,24 @@
   <p class="otp-form__text">
     {{ content.form.footer.text_top }}
   </p>
+
+  <div class="otp-form__radio-lang">
+    {% for radioLang in radioLangs %}
+      <p class="otp-input-radio">
+        <input
+          type="radio"
+          name="{{ radioLang.name }}"
+          id="{{ radioLang.id }}"
+          value="{{ radioLang.title }}"
+
+          {% if radioLang.id === lang %}
+            checked
+          {% endif %}
+        >
+        <label for="{{ radioLang.id }}">{{ radioLang.title }}</label>
+      </p>
+    {% endfor %}
+  </div>
 
   <div class="otp-form__checkboxes">
     {% for checkbox in content.form.footer.checkboxes %}

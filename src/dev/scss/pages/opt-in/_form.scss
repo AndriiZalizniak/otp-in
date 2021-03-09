@@ -47,6 +47,19 @@
     }
   }
 
+  &__radio-lang {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .otp-input-radio {
+      &:not(:last-of-type) {
+        margin-right: 36px;
+      }
+    }
+  }
+
   &__checkboxes {
     padding-bottom: 50px;
     display: flex;

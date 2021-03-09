@@ -4,7 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
 <title>{{ title }}</title>
 
-<!-- нужно проставить ссылки на фавиконы из сеилсфорса -->
+<!-- OneTrust Cookies Consent Notice start -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="data domain script copied from the spreadsheet"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->
 
 <link rel="icon" type="image/png" sizes="32x32" href="https://image.mail.mymsd.ch/lib/fe9d13737664067c77/m/1/favicon-32x32_optin.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://image.mail.mymsd.ch/lib/fe9d13737664067c77/m/1/favicon-16x16_optin.png">

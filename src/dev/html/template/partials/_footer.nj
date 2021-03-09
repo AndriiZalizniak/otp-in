@@ -1,6 +1,15 @@
 <footer class="otp-footer">
   <div class="otp-footer__inner">
     {% for item in content.footer.links %}
+      {% if item.btn %}
+      <button
+        id="ot-sdk-btn"
+        type="button"
+        class="otp-footer__link ot-sdk-show-settings"
+      >
+        {{ item.text }}
+      </button>
+      {% else %}
       <a
         href="{{ item.link }}"
         target="_blank"
@@ -9,6 +18,7 @@
       >
       {{ item.text }}
       </a>
+      {% endif %}
     {% endfor %}
   </div>
 </footer>

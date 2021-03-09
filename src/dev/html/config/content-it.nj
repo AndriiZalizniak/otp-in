@@ -187,7 +187,8 @@
       },
       {
         text: 'Preferenze sui cookie',
-        link: '#Cookie Preferences'
+        link: '#Cookie Preferences',
+        btn: true
       }
     ]
   }

@@ -196,3 +196,60 @@
     }
   }
 }
+
+
+.otp-input-radio {
+  display: inline-block;
+
+  &>input {
+    display: none;
+  }
+
+  &>input:checked + label {
+    pointer-events: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &>label {
+    padding-left: 36px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 2px solid $green;
+      transform: translateY(-50%);
+      transition: opacity .2s linear;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(24px / 2 - 4px);
+      left: calc(24px / 2 - 4px);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #000;
+      opacity: 0;
+      transition: opacity .2s linear;
+    }
+
+    &:hover {
+      &::before {
+        @include media(">large") {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
