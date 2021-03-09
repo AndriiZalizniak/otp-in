@@ -10,11 +10,11 @@
 
 {# lang redirect #}
 {# <script src="scripts/lang-redirect.js"></script> #}
-<script src="https://cloud.mail.mymsd.ch/lang-redirect_JS_optin"></script>
+{# <script src="https://cloud.mail.mymsd.ch/lang-redirect_JS_optin"></script> #}
 {# lang redirect #}
 
-{# <link rel="stylesheet" href="./styles/styles.css"> #}
-<link rel="stylesheet" href="https://cloud.mail.mymsd.ch/styles-CSS_optin">
+<link rel="stylesheet" href="./styles/styles.css">
+{# <link rel="stylesheet" href="https://cloud.mail.mymsd.ch/styles-CSS_optin"> #}
 {% block styles %}{% endblock %}
 </head>
 <body class="{{ pageClass }}">

@@ -90,6 +90,14 @@
 
   &__subtitle {
     padding-bottom: 22px;
+
+    @include media(">large") {
+      margin-left: -$halfGap-desktop;
+    }
+
+    @include media(">tiny", "<=large") {
+      margin-left: -$halfGap-mobile;
+    }
   }
 
   &__text {

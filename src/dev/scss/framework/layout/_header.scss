@@ -19,9 +19,13 @@
 
   &__logo {
     display: inline-block;
+    
+    @include media(">tiny") {
+      max-width: 150px;
+    }
 
     @include media("<=tiny") {
-      max-width: 170px;
+      max-width: 120px;
     }
   }
 
@@ -98,6 +102,18 @@
       opacity: 1;
       pointer-events: visible;
       transform: translateY(0);
+    }
+
+    a {
+      display: block;
+      transition: border .2s .05s linear;
+
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0);
+
+      &:hover {
+        border: 1px solid $grey;
+      }
     }
   }
 }
