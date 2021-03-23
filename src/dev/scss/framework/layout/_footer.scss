@@ -1,13 +1,39 @@
 .otp-footer {
-  &__inner {
-    padding-top: 40px;
+  background-color: $green;
+  
+  &__wrap {
     padding-bottom: 40px;
+    padding-top: 40px;
+    
+    @include media(">medium") {
+      display: flex;
+    }
+  }
+
+  &__inner {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: $green;
     color: $white;
+  }
+
+  &__copy {
+    margin-left: auto;
+    flex: 0 0 400px;
+    color: $white;
+
+    @include media("<=medium") {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    &--cookie {
+      margin-top: 24px;
+      padding: 12px 18px;
+      background-color: $white;
+      color: $green;
+    }
   }
 
   &__link {

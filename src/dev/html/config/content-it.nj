@@ -184,12 +184,10 @@
       {
         text: "Termini di utilizzo",
         link: 'https://www.msd.ch/de/terms-of-use.xhtml'
-      },
-      {
-        text: 'Preferenze sui cookie',
-        link: '#Cookie Preferences',
-        btn: true
       }
-    ]
+    ],
+    cookie: {
+      text: 'Cookie Preferences'
+    }
   }
 } %}

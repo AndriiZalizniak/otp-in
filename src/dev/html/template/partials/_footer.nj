@@ -1,24 +1,30 @@
 <footer class="otp-footer">
-  <div class="otp-footer__inner">
-    {% for item in content.footer.links %}
-      {% if item.btn %}
+  <div class="otp-wrap otp-footer__wrap">
+    <div class="otp-footer__inner">
+      {% for item in content.footer.links %}
+        <a
+          href="{{ item.link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="otp-footer__link"
+        >
+        {{ item.text }}
+        </a>
+      {% endfor %}
+    </div>
+    <div class="otp-footer__copy">
+      <p class="otp-extra-small">
+        MSD Merck Sharp & Dohme AG, Werftestrasse 4, CH-6005 Luzern, Schweiz. Alle Rechte vorbehalten.
+      </p>
+      <p>
       <button
         id="ot-sdk-btn"
         type="button"
-        class="otp-footer__link ot-sdk-show-settings"
+        class="otp-footer__copy--cookie ot-sdk-show-settings"
       >
-        {{ item.text }}
+        {{ content.footer.cookie.text }}
       </button>
-      {% else %}
-      <a
-        href="{{ item.link }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="otp-footer__link"
-      >
-      {{ item.text }}
-      </a>
-      {% endif %}
-    {% endfor %}
+      </p>
+    </div>
   </div>
 </footer>
